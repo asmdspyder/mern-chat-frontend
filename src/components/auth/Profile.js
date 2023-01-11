@@ -10,17 +10,20 @@ const Profile = () => {
 
   useEffect(() => {
     axios
-      .get("https://mern-lets-chat.onrender.com/api/fruits")
+      .get("https://mern-chat-backend-production.up.railway.app/api/fruits")
       .then((response) => setFruits(response.data));
   }, []);
 
   const userDelete = () => {
     axios
-      .delete("https://mern-lets-chat.onrender.com/api/users/profile", {
-        headers: {
-          "auth-token": userData.token,
-        },
-      })
+      .delete(
+        "https://mern-chat-backend-production.up.railway.app/api/users/profile",
+        {
+          headers: {
+            "auth-token": userData.token,
+          },
+        }
+      )
       .then((window.location = "/fruitlist"));
 
     setUserData({

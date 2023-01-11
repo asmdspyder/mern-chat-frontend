@@ -3,6 +3,7 @@ import { UserContext } from "../App";
 import { Container, Col, Row, Button } from "react-bootstrap";
 import io from "socket.io-client";
 
+const socket = io();
 const Chat = () => {
   const [chatUsers, setChatUsers] = useState([]);
   const [chatMessage, setChatMessage] = useState({
@@ -13,7 +14,6 @@ const Chat = () => {
   });
   const [msgList, setMsgList] = useState([]);
   const [currentRoom, setCurrentRoom] = useState("General Chat");
-  const socket = io();
 
   useEffect(() => {
     socket.emit("userJoin", userData.user.name);

@@ -31,7 +31,7 @@ function App() {
       }
 
       const tokenResponse = await axios.post(
-        "https://mern-lets-chat.onrender.com/api/users/tokenIsValid",
+        "https://mern-chat-backend-production.up.railway.app/api/users/tokenIsValid",
         null,
         {
           headers: { "auth-token": token },
@@ -41,7 +41,7 @@ function App() {
       console.log(tokenResponse.data);
       if (tokenResponse.data) {
         const userResponse = await axios.get(
-          "https://mern-lets-chat.onrender.com/api/users/profile",
+          "https://mern-chat-backend-production.up.railway.app/api/users/profile",
           {
             headers: { "auth-token": token },
           }
