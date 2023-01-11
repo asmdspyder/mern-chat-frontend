@@ -1,0 +1,73 @@
+body{
+     
+}
+
+.chat{
+    margin-top: 200px;
+    font-size: 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    
+}
+
+.header{
+    font-size: 25px;
+}
+
+.welcome{
+    margin-top: 180px;
+    
+}
+
+form {
+    width: 70%;
+    padding: 10px;
+    border: 2px solid black;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.22);
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    width:50%
+}
+
+.input{
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.color{
+    color:blue
+}
+
+.chat-ui{
+        width: 100%;
+        padding: 20px;
+        border: 2px solid black;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.22);
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+}
+
+.msg-input{
+   
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    
+
+}
+
+.msg-inside{
+    
+    display: flex;
+    
+    
+}
+
+.msg{
+    width:100px
+}
