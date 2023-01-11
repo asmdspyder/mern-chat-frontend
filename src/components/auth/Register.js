@@ -30,11 +30,11 @@ const Register = () => {
         console.log(newUser);
       }
       await axios.post(
-        "https://mern-chat-backend-production.up.railway.app/api/users/register",
+        "https://mern-back-end.onrender.com/api/users/register",
         newUser
       );
       const loginResponse = await axios.post(
-        "https://mern-chat-backend-production.up.railway.app/api/users/login",
+        "https://mern-back-end.onrender.com/api/users/login",
         newUser
       );
       setUserData({

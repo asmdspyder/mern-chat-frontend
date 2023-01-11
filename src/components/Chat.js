@@ -3,7 +3,7 @@ import { UserContext } from "../App";
 import { Container, Col, Row, Button } from "react-bootstrap";
 import io from "socket.io-client";
 
-const socket = io();
+const socket = io.connect();
 const Chat = () => {
   const [chatUsers, setChatUsers] = useState([]);
   const [chatMessage, setChatMessage] = useState({
