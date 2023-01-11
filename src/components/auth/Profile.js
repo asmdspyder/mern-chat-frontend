@@ -10,13 +10,13 @@ const Profile = () => {
 
   useEffect(() => {
     axios
-      .get("https://mernchatbackend-zkx3.onrender.com/api/fruits")
+      .get("https://mern-back-end.onrender.com/api/fruits")
       .then((response) => setFruits(response.data));
   }, []);
 
   const userDelete = () => {
     axios
-      .delete("https://mernchatbackend-zkx3.onrender.com/api/users/profile", {
+      .delete("https://mern-back-end.onrender.com/api/users/profile", {
         headers: {
           "auth-token": userData.token,
         },

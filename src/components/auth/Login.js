@@ -23,7 +23,7 @@ const Login = () => {
       };
 
       const loginResponse = await axios.post(
-        "https://mernchatbackend-zkx3.onrender.com/api/users/login",
+        "https://mern-back-end.onrender.com/api/users/login",
         newUser
       );
 

@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { Button } from "react-bootstrap";
+import axios from "axios";
 
 const Invite = () => {
   const [email, setEmail] = useState("");
@@ -8,9 +9,8 @@ const Invite = () => {
 
   const sendMail = async (e) => {
     e.preventDefault();
-    const res = await fetch(
-      "https://mernchatbackend-zkx3.onrender.com/sendmail",
-      {
+    const res = await axios
+      .post("https://mern-back-end.onrender.com/sendmail", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -18,14 +18,14 @@ const Invite = () => {
         body: JSON.stringify({
           email,
         }),
-      }
-    ).then((response) => {
-      if (response.status === 200) {
-        setStatus("Invite Message Sent Successfully");
-      } else {
-        setStatus("Invite Message not Sent ,please check the mail address ");
-      }
-    });
+      })
+      .then((response) => {
+        if (response.status === 200) {
+          setStatus("Invite Message Sent Successfully");
+        } else {
+          setStatus("Invite Message not Sent ,please check the mail address ");
+        }
+      });
   };
 
   return (
