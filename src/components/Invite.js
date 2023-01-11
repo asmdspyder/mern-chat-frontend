@@ -10,7 +10,7 @@ const Invite = () => {
   const sendMail = async (e) => {
     e.preventDefault();
     const res = await axios
-      .post("https://mern-back-end.onrender.com/sendmail", {
+      .post("https://mern-lets-chat.onrender.com/sendmail", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
